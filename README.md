@@ -19,4 +19,4 @@ Currently, the only supported command is to create an article page. The fdollowi
 
 ## Further Development
 
-Using [Click me!] <http://nafiulis.me/making-a-static-blog-with-pelican.html> (this guide) as a template for fabfiles.
+Using [Click me!](http://nafiulis.me/making-a-static-blog-with-pelican.html "this guide") as a template for fabfiles.
