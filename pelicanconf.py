@@ -8,7 +8,7 @@ SITEURL = ''
 FAVICON = '/home/ubuntu/favicon.ico'
 THEME = 'pelican-bootstrap3'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['testgen']
+PLUGINS = []
 PATH = 'content'
 READERS = {'html': None}
 
@@ -30,12 +30,6 @@ DEFAULT_PAGINATION = 10
 
 
 # Database vars
-
-DATABASESERVER = 'srcdb1.camvfsq3weo1.us-west-2.rds.amazonaws.com'
-DATABASEUSER = 'its'
-DATABASEPASS = 'newYear!'
-DATABASENAME = 'Pelican'
-
 
 LOAD_CONTENT_CACHE = False
 DISPLAY_PAGES_ON_MENU = False

@@ -5,7 +5,7 @@ import shutil
 import sys
 import SocketServer
 from datetime import datetime
-
+import click
 from pelican.server import ComplexHTTPRequestHandler
 
 # Local path configuration (can be absolute or relative to fabfile)
@@ -13,8 +13,8 @@ env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
-production = 'ubuntu@localhost:22'
-dest_path = '/var/www'
+production = 'ubuntu@localhost:22' #You may wish to choose this if you do not run Ubuntu
+dest_path = '/var/www' # See above
 
 # Rackspace Cloud Files configuration settings
 env.cloudfiles_username = 'my_rackspace_username'
@@ -101,12 +101,12 @@ TEMPLATE = """
 
 Title: {title}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category:
+Category: {category}
 
 {content}
 """
 
-def make_entry(title,content):
+def make_entry(title,content,category):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
     f_create = "content/{}_{:0>2}_{:0>2}_{}.md".format(
@@ -117,6 +117,7 @@ def make_entry(title,content):
                                 day=today.day,
                                 hour=today.hour,
                                 minute=today.minute,
+				category=category,
 				content=content)
     with open(f_create, 'w') as w:
         w.write(t)
