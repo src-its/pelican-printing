@@ -6,9 +6,9 @@ AUTHOR = u'ITS'
 SITENAME = u'SimonsRockPelican'
 SITEURL = ''
 FAVICON = '/home/ubuntu/favicon.ico'
-THEME = 'pelican-bootstrap3'
+THEME = ''
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = []
+PLUGINS = ['csv']
 PATH = 'content'
 READERS = {'html': None}
 

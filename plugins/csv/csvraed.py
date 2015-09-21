@@ -1,0 +1,2 @@
+def csvread(tablename):
+

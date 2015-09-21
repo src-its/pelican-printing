@@ -7,6 +7,8 @@ import SocketServer
 from datetime import datetime
 import click
 from pelican.server import ComplexHTTPRequestHandler
+import csv
+
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
