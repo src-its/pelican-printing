@@ -124,3 +124,11 @@ def make_entry(title,content,category):
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
+
+
+def read_csv(title,dialect="rb"):
+	with open(title,"rU") as csvfile:
+		read = csv.reader(csvfile, delimiter=' ', quotechar='|')
+		for row in read:
+			print ', '.join(row)
+
