@@ -16,6 +16,11 @@ Currently, the only supported command is to create an article page. The fdollowi
 	fab make_entry:"TITLE","CONTENT","CATEGORY"
 
 
+You may also read a CSV file by using the following notation:
+
+	fab read_csv:TITLE.csv
+
+Currently all the CSV reader will do is spit out data.
 
 ## Further Development
 
